@@ -170,6 +170,38 @@ header.scrolled {
     box-shadow: 0 0 15px rgba(98, 191, 221, 0.4);
 }
 
+/* Checkbox Style */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    /* Strict vertical center */
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    /* Larger target */
+    accent-color: var(--primary);
+    margin: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-group label {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0;
+    line-height: normal;
+    /* Adjust line height for center */
+    transform: translateY(1px);
+    /* Micro-adjustment */
+}
+
 /* Split Contact Section - Refined */
 .section-split {
     background-color: var(--white);
@@ -1261,6 +1293,60 @@ header.scrolled {
     color: var(--white);
     position: relative;
     overflow: hidden;
+}
+
+/* Visual Content Internal */
+.subtitle-visual {
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.contact-info-visual {
+    margin-bottom: 2rem;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    /* Ensure vertical center */
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.icon-visual {
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    /* Prevent squashing */
+}
+
+.contact-row p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--white);
+    line-height: 1.2;
+    /* Tighten for alignment */
+}
+
+.map-placeholder-visual {
+    width: 100%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
 }
 
 /* Specialists Section Refined */
