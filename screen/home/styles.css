@@ -81,14 +81,25 @@ h6 {
 header {
     padding: 1rem 0;
     background-color: rgba(255, 255, 255, 0.05);
-    /* Very subtle tint */
+    /* Restore subtle white tint */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background-color 0.3s ease;
+    transition: all 0.4s ease;
+}
+
+header.scrolled {
+    background-color: rgba(3, 4, 94, 0.85);
+    /* Primary color with opacity */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 0;
+    /* Make it slightly more compact */
 }
 
 .header-flex {

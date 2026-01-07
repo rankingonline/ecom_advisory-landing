@@ -64,6 +64,15 @@ const renderLayout = () => {
         menuToggle.addEventListener('click', toggleMenu);
         closeMenu.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Scroll Effect Logic
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight * 0.8) { // Trigger after 80% viewport height
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
     }
 
     if (footer) footer.innerHTML = footerContent;
