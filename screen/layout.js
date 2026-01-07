@@ -38,8 +38,17 @@ const renderLayout = () => {
 
     // Footer Content
     const footerContent = `
-        <div class="container">
-            <p>&copy; 2026 Ecom Advisory. Todos los derechos reservados.</p>
+        <div class="container footer-content">
+            <img src="../../assets/logo/logo-full-white.png" alt="Ecom Advisory" class="footer-logo">
+            <p class="footer-tagline">ECOM Advisory · Asesoría y consultoría especializada en e-commerce con stock</p>
+            <div class="footer-links">
+                <a href="#">Aviso legal</a>
+                <span class="separator">·</span>
+                <a href="#">Política de privacidad</a>
+                <span class="separator">·</span>
+                <a href="#contacto-final">Contacto</a>
+            </div>
+            <p class="footer-copyright" style="margin-top: 1.5rem; opacity: 0.4; font-size: 0.85rem;">&copy; 2026 Ecom Advisory. Todos los derechos reservados.</p>
         </div>
     `;
 
