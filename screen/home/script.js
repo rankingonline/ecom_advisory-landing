@@ -20,4 +20,31 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
         console.error('Vanta JS Error:', error);
     }
+
+    // Animation Observer for Methodology
+    const observerOptions = {
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Trigger Progress Fill
+                const progressFill = document.querySelector('.progress-fill');
+                if (progressFill) {
+                    // Simple check for mobile logic could vary, but width 100% works for horizontal. 
+                    // For vertical pure CSS solution often easier, but let's trigger a class.
+                    progressFill.style.width = '100%';
+                    // If vertical (mobile), we might want height. 
+                    if (window.innerWidth <= 768) {
+                        progressFill.style.height = '100%';
+                        progressFill.style.width = '100%'; // Ensure line thickness
+                    }
+                }
+            }
+        });
+    }, observerOptions);
+
+    const methodologySection = document.querySelector('#metodologia');
+    if (methodologySection) observer.observe(methodologySection);
 });
