@@ -170,6 +170,323 @@ header.scrolled {
     box-shadow: 0 0 15px rgba(98, 191, 221, 0.4);
 }
 
+/* Split Contact Section - Refined */
+.section-split {
+    background-color: var(--white);
+    /* Container background */
+    padding: 2rem 0;
+    /* Less padding, let form control height */
+    overflow: hidden;
+}
+
+.container-split {
+    display: flex;
+    min-height: 600px;
+    background: var(--white);
+    border-radius: 30px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* LEFT SIDE: Visual Content */
+.split-visual {
+    flex: 1;
+    background: var(--gradient);
+    /* Brand Gradient */
+    position: relative;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+    overflow: hidden;
+}
+
+/* Abstract Texture/Image Overlay (Optional - Simulated) */
+.split-visual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://grainy-gradients.vercel.app/noise.svg');
+    /* Example Texture */
+    opacity: 0.1;
+    mix-blend-mode: overlay;
+}
+
+.visual-content {
+    position: relative;
+    z-index: 10;
+    max-width: 450px;
+}
+
+.visual-content h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff, #a5f3fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Standard property */
+    -webkit-text-fill-color: transparent;
+}
+
+.visual-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 400px;
+}
+
+/* RIGHT SIDE: White Form */
+.split-form {
+    flex: 1;
+    background: var(--white);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.diagnosis-form-clean {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.diagnosis-form-clean h3 {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.form-group-clean {
+    margin-bottom: 1.25rem;
+}
+
+.form-group-clean label {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group-clean input,
+.form-group-clean textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    /* Slightly rounded, clean tech look */
+    font-size: 1rem;
+    color: var(--dark);
+    background: #fdfdfd;
+    transition: all 0.2s ease;
+}
+
+.form-group-clean input:focus,
+.form-group-clean textarea:focus {
+    border-color: var(--primary);
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(3, 4, 94, 0.1);
+}
+
+.btn-submit-clean {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary);
+    /* Primary Brand Color */
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    /* Fully rounded to match site style */
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(3, 4, 94, 0.2);
+}
+
+.btn-submit-clean:hover {
+    background: var(--tertiary);
+    /* Brand Turquoise */
+    color: var(--primary);
+    /* Dark Text for contrast */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(98, 191, 221, 0.4);
+    /* Glowing turquoise shadow */
+}
+
+.form-header-mobile {
+    display: none;
+}
+
+/* Mobile Responsiveness for Split Section */
+@media (max-width: 992px) {
+    .container-split {
+        flex-direction: column;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .split-visual {
+        padding: 4rem 1.5rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .visual-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .split-form {
+        padding: 3rem 1.5rem;
+        border-radius: 30px 30px 0 0;
+        margin-top: -30px;
+        /* Overlap effect */
+        position: relative;
+        z-index: 20;
+    }
+
+    .diagnosis-form-clean h3 {
+        text-align: center;
+    }
+}
+
+/* Contact Section */
+.section-dark {
+    background-color: var(--primary);
+    /* Deep brand blue */
+    padding: 6rem 0;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional background decoration for visual interest */
+.section-dark::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 80%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(98, 191, 221, 0.1) 0%, rgba(3, 4, 94, 0) 70%);
+    pointer-events: none;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-white-opacity {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Form Styles */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--tertiary);
+    margin-left: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    /* Fully rounded inputs */
+    padding: 1rem 1.5rem;
+    color: var(--white);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    border-radius: 20px;
+    /* Less rounded for textarea */
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: var(--tertiary);
+    box-shadow: 0 0 15px rgba(98, 191, 221, 0.3);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-submit {
+    min-width: 250px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--tertiary) 0%, var(--secondary) 100%);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(98, 191, 221, 0.4);
+}
+
+/* Mobile Adjustments for Form */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        /* Stack inputs on mobile */
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+    .form-container {
+        padding: 2rem 1.5rem;
+    }
+}
+
 /* Mobile Controls */
 .mobile-controls {
     display: none;
