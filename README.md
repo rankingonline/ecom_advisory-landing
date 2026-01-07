@@ -35,6 +35,26 @@ Se utilizan fuentes de Google Fonts.
     *   Uso: Encabezados (H1-H6), CTAs grandes, destacados.
     *   Pesos: 600 (SemiBold), 700 (Bold).
 
+### Estilo Visual y Concepto
+
+El diseño debe reflejar un enfoque **tecnológico, profesional y orientado al crecimiento**.
+
+*   **Conceptos de Marca**: La identidad visual debe comunicar claramente los pilares de **E-commerce, Asesoramiento y Crecimiento Empresarial**.
+*   **Interfaz (UI)**:
+    *   **Esquinas Redondeadas**: Uso consistente de bordes redondeados (soft rounded corners) en tarjetas, botones y contenedores para evocar modernidad y accesibilidad.
+    *   **Uso de Degradados**: El degradado principal es un elemento identitario clave. Debe usarse en fondos de secciones importantes (Hero), botones principales y elementos gráficos para aportar dinamismo.
+    *   **Glassmorphism**: Uso de efectos de vidrio esmerilado (transparencia + blur) para detalles sutiles, tarjetas sobre fondos complejos o barras de navegación, añadiendo profundidad y un toque premium.
+    *   **Estética Tecnológica**: Diseño limpio, uso amplio del espacio en blanco (whitespace) y composiciones que inspiren solidez y vanguardia.
+
+### Responsividad (Prioridad Máxima)
+
+La adaptación a diferentes dispositivos no es opcional, es **crítica**. El sitio debe verse y funcionar impecablemente en cualquier resolución.
+
+*   **Mobile First**: Todo componente debe pensarse primero para pantallas pequeñas y escalar progresivamente a escritorio.
+*   **Fluidez Total**: Los layouts deben adaptarse suavemente entre breakpoints. Evitar anchos fijos que rompan la estructura en pantallas intermedias (tablets).
+*   **Experiencia Táctil**: Elementos interactivos (botones, enlaces) deben tener áreas de toque amplias y amigables para pulgares en móvil.
+*   **Cero Scroll Horizontal**: Bajo ninguna circunstancia debe existir scroll horizontal en la vista principal (body).
+
 ## Cómo empezar
 
 1.  Navega a la carpeta `screen/home/`.
