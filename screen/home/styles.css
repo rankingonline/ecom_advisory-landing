@@ -79,22 +79,176 @@ h6 {
 
 /* Header */
 header {
-    padding: 1.5rem 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    /* More transparent for dark theme feel */
+    padding: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Very subtle tint */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-header h1 {
-    color: var(--white);
-    /* White text for header on dark bg */
-    font-size: 1.5rem;
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 56px;
+    /* Adjust based on logo proportions */
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--tertiary);
+}
+
+
+
+.btn-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-glass,
+.btn-icon-glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+}
+
+.btn-glass:hover,
+.btn-icon-glass:hover {
+    background: var(--tertiary);
+    color: var(--primary);
+    border-color: var(--tertiary);
+    box-shadow: 0 0 15px rgba(98, 191, 221, 0.4);
+}
+
+/* Mobile Controls */
+.mobile-controls {
+    display: none;
+    /* Hidden on desktop */
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-icon-glass {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(3, 4, 94, 0.95);
+    /* Deep Primary Brand Color */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    padding: 10px;
+}
+
+.mobile-nav-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.mobile-nav-link {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s;
+}
+
+.mobile-nav-link:hover {
+    color: var(--tertiary);
+}
+
+/* Media Queries for Header */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+        /* Hide desktop nav on mobile */
+    }
+
+    .mobile-controls {
+        display: flex;
+        /* Show controls on mobile */
+    }
+}
+
+/* Hero Section */
 
 /* Hero Section */
 #hero {
