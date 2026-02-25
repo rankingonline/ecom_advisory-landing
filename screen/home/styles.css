@@ -1228,6 +1228,80 @@ details[open] .faq-answer {
     /* Turn white on hover for extra pop */
 }
 
+/* Hero Layout Updates */
+.hero-content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    z-index: 10;
+}
+
+/* Hero Integrations (Logos) */
+.hero-integrations {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.integrations-title {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.integrations-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    flex-wrap: wrap;
+}
+
+.integration-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.integration-item:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.integration-item img {
+    height: 26px;
+    width: auto;
+    object-fit: contain;
+}
+
+.integration-item.payment-gateways {
+    gap: 1rem;
+}
+
+.integration-item .separator {
+    width: 1px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.integration-item img.redsys-logo {
+    height: 22px;
+    filter: brightness(0) invert(1);
+}
+
+.integration-item span {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
 /* Video Placeholder - Glassmorphism */
 .video-placeholder {
     width: 100%;
@@ -1619,6 +1693,14 @@ details[open] .faq-answer {
         opacity: 0.05;
         -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%);
         mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%);
+    }
+
+    .integrations-logos {
+        gap: 1.5rem;
+    }
+
+    .hero-content-wrapper {
+        gap: 2.5rem;
     }
 }
 
